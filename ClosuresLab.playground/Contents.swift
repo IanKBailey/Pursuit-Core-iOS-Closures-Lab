@@ -10,9 +10,8 @@ import UIKit
 func applyKTimes (_ k: Int, closure: () -> ()) {
     for _ in 1...k {
         closure()
-    }
+        }
 }
-
 // Uncomment out the following lines to check your solution
 
 var myVal = 0
@@ -28,19 +27,39 @@ assert(myVal == 5, "Expected myVal to be five, but was \(myVal)")
 
 // Your function here
 
+//func multiples(of:Int, in arr:[Int]) -> [Int] {
+//    var output = [Int]()
+//    for num in arr {
+//        if num % of == 0 {
+//            output.append(num)
+//
+//        }
+//    }
+//    return output
+//}
+
+func multiples(of:Int, in arr:[Int]) -> [Int] {
+    let output = arr.filter {
+        $0 % of == 0
+}
+    return output
+}
+
 // Uncomment out the following lines to check your solution
 
-//let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
-//let expectedOutputTwo = [3, 6, 9, 3, 12]
-//let outputTwo = multiples(of: 3, in: numbers)
-//assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTwo), but found \(outputTwo)")
+let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
+let expectedOutputTwo = [3, 6, 9, 3, 12]
+let outputTwo = multiples(of: 3, in: numbers)
+assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTwo), but found \(outputTwo)")
 
 
 // Question Three
 
 // Write a function called largestValue(in:) that finds the largest Int in an array of Ints. Use reduce to solve this exercise.
 
-// Your function here
+func largestValue(in arr: [Int]) {
+    let output = arr.reduce
+}
 
 // Uncomment out the following lines to check your solution
 
@@ -54,7 +73,8 @@ assert(myVal == 5, "Expected myVal to be five, but was \(myVal)")
 
 // Write a function called sortedNamesByLastName(in:) that takes in an array of tuples of type (String, String) and returns an array of tuples sorted by last name.
 
-// Your function here
+
+
 
 // Uncomment out the following lines to check your solution
 
