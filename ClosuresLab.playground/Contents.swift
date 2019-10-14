@@ -7,13 +7,19 @@ import UIKit
 
 // Your function here
 
+func applyKTimes (_ k: Int, closure: () -> ()) {
+    for _ in 1...k {
+        closure()
+    }
+}
+
 // Uncomment out the following lines to check your solution
 
-//var myVal = 0
-//applyKTimes(5) {
-//    myVal += 1
-//}
-//assert(myVal == 5, "Expected myVal to be five, but was \(myVal)")
+var myVal = 0
+applyKTimes(5) {
+    myVal += 1
+}
+assert(myVal == 5, "Expected myVal to be five, but was \(myVal)")
 
 
 // Question Two
